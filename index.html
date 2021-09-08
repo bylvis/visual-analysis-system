@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字货币可视化分析系统</title>
+
+    <link rel="stylesheet" href="./css/css常用初始化.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./js/bootstrap.js">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jQuery1.4.1.js"></script>
+    <script src="./js/echart.JS"></script>
+    <script src="./js/world.js"></script>
+    <script src="./js/k_chat.js"></script>
+    <script src="./js/pie.js"></script>
+    <script src="./js/tree_chat.js"></script>
+    <script src="./js/world_map.js"></script>
+    <script src="./js/map_bar.js"></script>
+    <!-- <script src="./js/circle_pie.js"></script> -->
+    <script src="./js/sjz.js"></script>
+    <script src="./js/sunset.js"></script>
+    <script src="./js/lines.js"></script>
+    <script src="./js/flexible.js"></script>
+    <script src="./js/index.js"></script>
+
+
+
+1
+</head>
+
+<body>
+    <div class="main">
+        <div class="left_tab">
+            <a href="#" class="tab_1">k线</a>
+            <a href="#" class="tab_2">数据</a>
+            <a href="#" class="tab_3">板块</a>
+            <a href="#" class="tab_4">日历</a>
+            <a href="#" class="tab_5">热度</a>
+            <a href="#" class="tab_6">行情</a>
+        </div>
+        <div class="main_chat">
+            <div class="chat" style="display: block;">
+                <div class="banner">
+                    <a href="#" class="font glyphicon glyphicon-home"></a>
+                    <input type="text" class="k_serach" placeholder="搜索币种">
+                    <a href="#" class="font glyphicon glyphicon-search"></a>
+                    <div class="coin">
+                        <a class="BTC box_coin">BTC</a>
+                        <a class="ETH box_coin">ETH</a>
+                        <a class="box_coin">ADA</a>
+                        <a class="box_coin">BNB</a>
+                        <a class="box_coin">USDT</a>
+                        <a class="box_coin">XRP</a>
+                        <a class="box_coin">DOGE</a>
+                        <a class="box_coin">SOL</a>
+                        <a class="box_coin">DOT</a>
+                        <a class="box_coin">UNI</a>
+                        <a class="box_coin">LUNA</a>
+                        <a class="box_coin">LINK</a>
+                        <a class="box_coin">BCH</a>
+                    </div>
+                    <i class="glyphicon glyphicon-user font"></i>
+                    <a class="log" href="#">登录</a>/ <a class="log" href="#">注册</a>·
+                </div>
+                <div id="k_chat"></div>
+            </div>
+            <div class="chat">
+                <div class="banner"></div>
+                <div id="lines_chat"></div>
+                <div id="pie_chat"></div>
+            </div>
+            <div class="chat">
+                <div class="banner"></div>
+                <div class="table_box">
+                    <div id="tree_chat"></div>
+                    <table class="tree_table">
+                        <thead>
+                            <th>#</th>
+                            <th>概念</th>
+                            <th>上涨/下跌(次数)</th>
+                            <th>领涨</th>
+                            <th>总市值</th>
+                            <th>24H平均涨跌幅</th>
+                        </thead>
+                        <tr>
+                            <td>1</td>
+                            <td>超级算力</td>
+                            <td>
+                                <div class="up_down">
+                                    <div class="up">7</div>
+                                    <div class="down">3</div>
+                                </div>
+                            </td>
+                            <td>SOL+22.46%</td>
+                            <td>50亿</td>
+                            <td>+6.95%</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>超级算力</td>
+                            <td>
+                                <div class="up_down">
+                                    <div class="up">7</div>
+                                    <div class="down">3</div>
+                                </div>
+                            </td>
+                            <td>SOL+22.46%</td>
+                            <td>50亿</td>
+                            <td>+6.95%</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>超级算力</td>
+                            <td>
+                                <div class="up_down">
+                                    <div class="up">7</div>
+                                    <div class="down">3</div>
+                                </div>
+                            </td>
+                            <td>SOL+22.46%</td>
+                            <td>50亿</td>
+                            <td>+6.95%</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>超级算力</td>
+                            <td>
+                                <div class="up_down">
+                                    <div class="up">7</div>
+                                    <div class="down">3</div>
+                                </div>
+                            </td>
+                            <td>SOL+22.46%</td>
+                            <td>50亿</td>
+                            <td>+6.95%</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>超级算力</td>
+                            <td>
+                                <div class="up_down">
+                                    <div class="up">7</div>
+                                    <div class="down">3</div>
+                                </div>
+                            </td>
+                            <td>SOL+22.46%</td>
+                            <td>50亿</td>
+                            <td>+6.95%</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>超级算力</td>
+                            <td>
+                                <div class="up_down">
+                                    <div class="up">7</div>
+                                    <div class="down">3</div>
+                                </div>
+                            </td>
+                            <td>SOL+22.46%</td>
+                            <td>50亿</td>
+                            <td>+6.95%</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>超级算力</td>
+                            <td>
+                                <div class="up_down">
+                                    <div class="up">7</div>
+                                    <div class="down">3</div>
+                                </div>
+                            </td>
+                            <td>SOL+22.46%</td>
+                            <td>50亿</td>
+                            <td>+6.95%</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>超级算力</td>
+                            <td>
+                                <div class="up_down">
+                                    <div class="up">7</div>
+                                    <div class="down">3</div>
+                                </div>
+                            </td>
+                            <td>SOL+22.46%</td>
+                            <td>50亿</td>
+                            <td>+6.95%</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>超级算力</td>
+                            <td>
+                                <div class="up_down">
+                                    <div class="up">7</div>
+                                    <div class="down">3</div>
+                                </div>
+                            </td>
+                            <td>SOL+22.46%</td>
+                            <td>50亿</td>
+                            <td>+6.95%</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>超级算力</td>
+                            <td>
+                                <div class="up_down">
+                                    <div class="up">7</div>
+                                    <div class="down">3</div>
+                                </div>
+                            </td>
+                            <td>SOL+22.46%</td>
+                            <td>50亿</td>
+                            <td>+6.95%</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>超级算力</td>
+                            <td>
+                                <div class="up_down">
+                                    <div class="up">7</div>
+                                    <div class="down">3</div>
+                                </div>
+                            </td>
+                            <td>SOL+22.46%</td>
+                            <td>50亿</td>
+                            <td>+6.95%</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>超级算力</td>
+                            <td>
+                                <div class="up_down">
+                                    <div class="up">7</div>
+                                    <div class="down">3</div>
+                                </div>
+                            </td>
+                            <td>SOL+22.46%</td>
+                            <td>50亿</td>
+                            <td>+6.95%</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>超级算力</td>
+                            <td>
+                                <div class="up_down">
+                                    <div class="up">7</div>
+                                    <div class="down">3</div>
+                                </div>
+                            </td>
+                            <td>SOL+22.46%</td>
+                            <td>50亿</td>
+                            <td>+6.95%</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="sunset">1
+
+                </div>
+            </div>
+            <div class="chat">
+                <div class="banner"></div>
+                <div class="left_tab1">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+                <div class="body_box">
+                    <div class="timer-shaft-box">
+                        <div class="timer-shaft">
+                            <div class="timer-left"></div>
+                            <div class="timer-right"></div>
+                            <div class="timer-scale">
+                                <div class="timer-scale-cont hov">
+                                    <p class="time-circle">2010</p>
+                                    <p class="line-scale"></p>
+                                </div>
+                                <div class="timer-scale-cont">
+                                    <p class="time-circle">2011</p>
+                                    <p class="line-scale"></p>
+                                </div>
+                                <div class="timer-scale-cont">
+                                    <p class="time-circle">2012</p>
+                                    <p class="line-scale"></p>
+                                </div>
+                                <div class="timer-scale-cont">
+                                    <p class="time-circle">2013</p>
+                                    <p class="line-scale"></p>
+                                </div>
+                                <div class="timer-scale-cont">
+                                    <p class="time-circle">2014</p>
+                                    <p class="line-scale"></p>
+                                </div>
+                                <div class="timer-scale-cont">
+                                    <p class="time-circle">2015</p>
+                                    <p class="line-scale"></p>
+                                </div>
+                                <div class="timer-scale-cont">
+                                    <p class="time-circle">2016</p>
+                                    <p class="line-scale"></p>
+                                </div>
+                                <div class="timer-scale-cont">
+                                    <p class="time-circle">2017</p>
+                                    <p class="line-scale"></p>
+                                </div>
+                                <div class="timer-scale-cont">
+                                    <p class="time-circle">2018</p>
+                                    <p class="line-scale"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timer-shaft-content">
+                            <div class="shaft-detail-cont" style="display: block;">
+                                <p class="timer-year"><i class="icon-year"></i><span>2010年</span></p>
+                                <div class="month-detail-box">
+                                    <span class="month-title">1月</span>
+                                    <p class="incident-record">1月21日、22日，大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件</p>
+                                </div>
+                                <div class="month-detail-box">
+                                    <span class="month-title">2月</span>
+                                    <p class="incident-record">2月1日，大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件<a href="#"><查看全部></a></p>
+                                </div>
+                                <div class="month-detail-box">
+                                    <span class="month-title">3月</span>
+                                    <p class="incident-record">3月8日，大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件</p>
+                                    <p class="incident-record">3月10日，大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件</p>
+                                </div>
+                                <div class="month-detail-box">
+                                    <span class="month-title">4月</span>
+                                    <p class="incident-record">4月1日，大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件<a href="#"><查看全部></a></p>
+                                </div>
+                                
+                            </div>
+                            <div class="shaft-detail-cont">
+                                <p class="timer-year"><i class="icon-year"></i><span>2011年</span></p>
+                                <div class="month-detail-box">
+                                    <span class="month-title">1月</span>
+                                    <p class="incident-record">1月21日、22日，大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件。</p>
+                                </div>
+                                <div class="month-detail-box">
+                                    <span class="month-title">2月</span>
+                                    <p class="incident-record">2月1日，大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件</p>
+                                </div>
+                                <div class="month-detail-box">
+                                    <span class="month-title">3月</span>
+                                    <p class="incident-record">3月8日，大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件</p>
+                                    <p class="incident-record">3月10日，大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件</p>
+                                </div>
+                            </div>
+                            <div class="shaft-detail-cont">
+                                <p class="timer-year"><i class="icon-year"></i><span>2012年</span></p>
+                                <div class="month-detail-box">
+                                    <span class="month-title">1月</span>
+                                    <p class="incident-record">1月21日、22日，大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件</p>
+                                </div>
+                                <div class="month-detail-box">
+                                    <span class="month-title">2月</span>
+                                    <p class="incident-record">2月1日，大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件</p>
+                                </div>
+                            </div>
+                            <div class="shaft-detail-cont">
+                                <p class="timer-year"><i class="icon-year"></i><span>2013年</span></p>
+                                <div class="month-detail-box">
+                                    <span class="month-title">1月</span>
+                                    <p class="incident-record">1月21日、22日，大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件</p>
+                                </div>
+                            </div>
+                            <div class="shaft-detail-cont">
+                                <p class="timer-year"><i class="icon-year"></i><span>2014年</span></p>
+                                <div class="month-detail-box">
+                                    <span class="month-title">1月</span>
+                                    <p class="incident-record">1月21日、22日，大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件</p>
+                                </div>
+                                <div class="month-detail-box">
+                                    <span class="month-title">2月</span>
+                                    <p class="incident-record">2月1日，大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件</p>
+                                </div>
+                            </div>
+                            <div class="shaft-detail-cont">
+                                <p class="timer-year"><i class="icon-year"></i><span>2015年</span></p>
+                                <div class="month-detail-box">
+                                    <span class="month-title">1月</span>
+                                    <p class="incident-record">1月21日、22日，大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件</p>
+                                </div>
+                            </div>
+                            <div class="shaft-detail-cont">
+                                <p class="timer-year"><i class="icon-year"></i><span>2016年</span></p>
+                                <div class="month-detail-box">
+                                    <span class="month-title">1月</span>
+                                    <p class="incident-record">1月21日、22日，大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件</p>
+                                </div>
+                                <div class="month-detail-box">
+                                    <span class="month-title">2月</span>
+                                    <p class="incident-record">2月1日，大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件</p>
+                                </div>
+                            </div>
+                            <div class="shaft-detail-cont">
+                                <p class="timer-year"><i class="icon-year"></i><span>2017年</span></p>
+                                <div class="month-detail-box">
+                                    <span class="month-title">1月</span>
+                                    <p class="incident-record">1月21日、22日，大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件</p>
+                                </div>
+                            </div>
+                            <div class="shaft-detail-cont">
+                                <p class="timer-year"><i class="icon-year"></i><span>2018年</span></p>
+                                <div class="month-detail-box">
+                                    <span class="month-title">1月</span>
+                                    <p class="incident-record">1月21日、22日，大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件</p>
+                                </div>
+                                <div class="month-detail-box">
+                                    <span class="month-title">2月</span>
+                                    <p class="incident-record">2月1日，大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件大事件<a href="#"><查看全部></a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat">
+                <div class="banner"></div>
+                <div id="world"></div>
+                <div class="hot">
+                    <div class="hot_title"></div>
+                    <div id="map_bar">
+
+                    </div>
+                </div>
+            </div>
+            <div class="chat">
+                <div class="banner"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

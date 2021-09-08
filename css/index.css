@@ -1,0 +1,246 @@
+@media screen and (max-width:320px) {
+    html{
+        font-size: 50px;
+    }
+}
+.main{
+    width: 24rem;
+    height: 12rem;;
+    background-color: rgb(244,246,250);
+}
+.left_tab{
+    float: left;
+    padding: 1rem 0;
+    width: 1rem;
+    height: 12rem;
+    background-color: #fff;
+}
+.left_tab a{
+    text-decoration: none;
+    font-size: .3rem;
+    text-indent: .2rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    color: black;
+    display: block;
+    width: 100%;
+    height: 1.5rem;
+    background-color: #fff;
+}
+.left_tab a:hover{
+    background-color: rgb(244,246,250);
+    color: rgb(137,207,255);
+}
+/* -------------- */
+.main_chat{
+    width: 10rem;
+    height: 12rem;
+    float: left;
+    /* background-color: pink; */
+}
+.chat{
+    display: none;
+    width: 23rem;
+    height: 12rem;
+    float: left;
+}
+.chat_display{
+    display: block;
+}
+
+
+/* k_chat */
+#k_chat{
+    /* display: none; */
+    margin-top: .625rem;
+    width: 23rem;
+    height: 10rem;
+    float: left;
+    /* background-color: aqua; */
+}
+
+.banner{
+    height: .625rem;
+    width: 23rem;
+    background-color: black;
+}
+.k_serach{
+    float: left;
+    font-size: .25rem;
+    margin-top: .05rem;
+    margin-left: .125rem;
+    width: 7rem;
+    height: .5rem;
+    outline: none;
+}
+/* banner */
+.banner .font{
+    margin: .125rem .125rem 0;
+    float: left;
+    font-size: .325rem;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+.box_coin{
+    margin: 0 .0625rem;
+    text-indent: .0625rem;
+    font-size: .25rem;
+    line-height: .625rem;
+    color: #fff;
+    float: left;
+    height: .625rem;
+    /* width: .625rem; */
+}
+.coin{
+    margin: 0 1rem;
+    float: left;
+    height: .625rem;
+    width: 10rem;
+    /* background-color: blue; */
+}
+.box_coin:hover{
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #fff;
+    color: black;
+}
+.log{
+    
+    line-height: .625rem;
+    font-size: .2rem;
+}
+
+/*数据tab栏 pie */
+#lines_chat{
+    float: left;
+    width: 18rem;
+    height: 11rem;
+}
+#pie_chat{
+    /* display: none; */
+    margin-top: 1rem;
+    width: 5rem;
+    height: 7rem;
+    float: right;
+    /* background-color: aqua; */
+}
+
+/* 板块 */
+#tree_chat{
+    width: 14rem;
+    height: 7rem;
+    /* background-color: #fff; */
+}
+.table_box{
+    width: 13.5rem;
+    height: 11.4rem;
+    border-right: 3px solid black;
+    /* background-color: rgb(137,207,255); */
+    float: left;
+}
+.tree_table ,th,tr,td{
+    margin-left: 1.4rem;
+    margin-top: .25rem;
+    /* border: 1px solid red; */
+    /* width: 3.75rem; */
+    padding: .0225rem .55rem;
+    /* background-color: #fff; */
+}
+
+.tree_table{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.tree_table tr:hover td{
+    background-color: rgb(235,247,255);
+}
+.up_down{
+    width: 1rem;
+    height: .1875rem;
+    background-color: transparent;
+}
+.up{
+    float: left;
+    text-align: center;
+    color: #fff;
+    width: 70%;
+    height: .1875rem;
+    background-color: green;
+}
+.down{
+    float: left;
+    text-align: center;
+    color: #fff;
+    width: 30%;
+    height: .1875rem;
+    background-color: red;
+}
+#sunset{
+    margin-top: .29rem;
+    float: left;
+    width: 9rem;
+    height: 11rem;
+    /* background-color: #fff; */
+}
+.left_tab1{
+    float: left;
+    width: .625rem;
+    height: 11rem;
+    background-color: red;
+}
+.left_tab1 .box{
+    width: .625rem;
+    height: .625rem;
+    background-color: skyblue;
+}
+.year_line{
+    float: left;
+    width: 22.2rem;
+    height: 11rem;
+    /* background-color: slateblue; */
+}
+.year{
+    
+    margin-top: 5.25rem;
+    margin-left: .125rem;
+    width: 22rem;
+    height: .1rem;
+    background-color: #ccc;
+}
+.point{
+    display: block;
+    float: left;
+    width: .3125rem;
+    height: .3125rem;
+    margin: -0.125rem 1.2rem 0;
+    border-radius: .15625rem;
+    background-color: springgreen;
+}
+.last{
+    margin-right: 0;
+}
+.point:hover{
+    background-color: tomato;
+    transition: .3s;
+    transform: scale(1.5);
+}
+#world{
+    float: left;
+    width: 17rem;
+    height: 11.2rem;
+    border-right:3px solid black;
+    /* background-color: yellow; */
+}
+.hot{
+    width: 6rem;
+    height: 11.2rem;
+    float: left;
+    /* background-color: pink; */
+}
+#map_bar{
+    width: 6rem;
+    height: 11rem;
+    /* background-color: plum; */
+}
+
