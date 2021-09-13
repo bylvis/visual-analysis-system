@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jQuery1.4.1.js"></script>
+    <script src="./json/BTC_H.js"></script>
+    <script src="./json/BTC_D.js"></script>
+</head>
+<body>
+    <script>
+        // function json_to_k(json) {
+        //     var K = new Array();
+        //     $.each(json, function (index, data) {
+        //         // console.log(data);
+        //         json[index] = new Array();
+        //         json[index][0] = data.day;
+        //         var re = new RegExp("-", 'g');
+        //         json[index][0] = json[index][0].replace(re, "/").substring(0, 10)
+        //         json[index][1] = parseInt(data.open);
+        //         json[index][2] = parseInt(data.close);
+        //         json[index][3] = parseInt(data.low);
+        //         json[index][4] = parseInt(data.high);
+        //         // console.log('时间' + json[index][0]);
+        //     })
+        //     return json;
+        // }
+        // console.log(BTC_D);
+        function json_to_k2(json){
+            var k = new Array();
+            $.each(json,function(index,data){
+            // console.log(index,data);
+            k[index] = new Array();
+            // 日期
+            k[index][0] = data.field2.substring(0, 10);
+            // open
+            k[index][1] = parseFloat(data.field4);
+            // close
+            k[index][2] = parseFloat(data.field7);
+            // low
+            k[index][3] = parseFloat(data.field6);
+            // high
+            k[index][4] = parseFloat(data.field5);
+        })
+        return k.reverse();
+        }
+    
+        var q = json_to_k2(BTC_D);
+        console.log(q);
+        // var btc_k = new Array();
+        // $.each(BTC_D,function(index,data){
+        //     // console.log(index,data);
+        //     btc_k[index] = new Array();
+        //     // 日期
+        //     btc_k[index][0] = data.field2.substring(0, 10);
+        //     // open
+        //     btc_k[index][1] = parseFloat(data.field4);
+        //     // close
+        //     btc_k[index][2] = parseFloat(data.field7);
+        //     // low
+        //     btc_k[index][3] = parseFloat(data.field6);
+        //     // high
+        //     btc_k[index][4] = parseFloat(data.field5);
+        // })
+        // console.log(btc_k);
+    
+    </script>
+</body>
+</html>

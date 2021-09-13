@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./json/Q1.js"></script>
+    <script src="./json/Q2.js"></script>
+    <script src="./js/jQuery1.4.1.js"></script>
+</head>
+
+<body>
+    <script>
+
+        function json_to_k(json) {
+            var K = new Array();
+            $.each(json, function (index, data) {
+                // console.log(data);
+                json[index] = new Array();
+                json[index][0] = data.day;
+                var re = new RegExp("-", 'g');
+                json[index][0] = json[index][0].replace(re, "/").substring(0, 10)
+                json[index][1] = parseInt(data.open);
+                json[index][2] = parseInt(data.close);
+                json[index][3] = parseInt(data.low);
+                json[index][4] = parseInt(data.high);
+                // console.log('时间' + json[index][0]);
+            })
+            return json;
+        }
+        // var q = json_to_k(Q2);
+        // console.log(q);
+        console.log(Q2);
+
+        // var Q1_K = new Array();
+        // $.each(Q1, function (index, data) {
+        //     // console.log(data);
+        //     Q1_K[index] = new Array();
+        //     Q1_K[index][0] = data.day;
+        //     var re = new RegExp("-", 'g');
+        //     Q1_K[index][0] = Q1_K[index][0].replace(re, "/").substring(0, 10)
+        //     Q1_K[index][1] = parseInt(data.open);
+        //     Q1_K[index][2] = parseInt(data.close);
+        //     Q1_K[index][3] = parseInt(data.low);
+        //     Q1_K[index][4] = parseInt(data.high);
+        //     console.log('时间' + Q1_K[index][0]);
+        //     // console.log('开盘价'+data.open);
+        //     // console.log('收盘价'+data.close);
+        //     // console.log('最高价'+data.high);
+        //     // console.log('最低价'+data.low);
+        // })
+        // console.log(Q1_K);
+
+    </script>
+
+
+</body>
+
+</html>
